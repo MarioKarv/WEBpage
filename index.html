@@ -9,6 +9,7 @@
       href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Madimi+One&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap"
       rel="stylesheet"
     />
+    <script defer src="/script.js"></script>
     <title>Pizzeria: Смачні піци на будь-який смак</title>
     <link rel="stylesheet" href="style.css" />
   </head>
@@ -140,6 +141,7 @@
           </section>
         </div>
       </div>
+      <div class="scroll-to-top" onclick="scrollToTop()">&#8679;</div>
     </main>
     <footer>
       <p class="foot">&copy; 2024 - Pizzeria</p>
@@ -148,22 +150,5 @@
       </div>
     </footer>
 
-    <script>
-      const images = ["img/pizza-hero.jpg", "img/Pitsa-Gavajska.jpg", "img/papperoni.jpg"];
-
-      let currentIndex = 0;
-      const hero = document.querySelector(".hero");
-
-      function changeImage() {
-        hero.style.backgroundImage = `linear-gradient(
-      to right,
-      rgba(232, 232, 246, 0.4),
-      rgba(224, 230, 246, 0.4)
-    ), url("${images[currentIndex]}")`;
-        currentIndex = (currentIndex + 1) % images.length;
-      }
-
-      setInterval(changeImage, 3000); 
-    </script>
   </body>
 </html>
