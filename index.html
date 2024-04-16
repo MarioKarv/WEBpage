@@ -3,9 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Madimi+One&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Madimi+One&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap"
+      rel="stylesheet"
+    />
     <title>Pizzeria: Смачні піци на будь-який смак</title>
     <link rel="stylesheet" href="style.css" />
   </head>
@@ -144,5 +147,23 @@
         <a href="#">Контакти</a> | <a href="#">Політика конфіденційності</a>
       </div>
     </footer>
+
+    <script>
+      const images = ["img/pizza-hero.jpg", "img/Pitsa-Gavajska.jpg", "img/papperoni.jpg"];
+
+      let currentIndex = 0;
+      const hero = document.querySelector(".hero");
+
+      function changeImage() {
+        hero.style.backgroundImage = `linear-gradient(
+      to right,
+      rgba(232, 232, 246, 0.4),
+      rgba(224, 230, 246, 0.4)
+    ), url("${images[currentIndex]}")`;
+        currentIndex = (currentIndex + 1) % images.length;
+      }
+
+      setInterval(changeImage, 3000); 
+    </script>
   </body>
 </html>
